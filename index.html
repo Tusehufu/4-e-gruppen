@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        .custom-radio {
-            width: 2rem;
-            height: 2rem;
-        }
-
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <h1 class="text-center">Futurama Quiz</h1>
+            <div class="col">
+                <div class="header">
+                    <h1>Futurama Quiz</h1>
+                </div>
+            </div>
         </div>
+    </div>
 
     </div>
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Statistics</h2>
-            <div class="row border">
-                <div class="col">
-                    <p class="fs-4">Correct: <span id="correct"></span></p> <!--Antal rätta svar visas här-->
+            
+            <div class="row-answers">
+                <div class="col" id="correctAnswers">
+                    <p>Correct: <span id="correct"></span></p> <!--Antal rätta svar visas här-->
                 </div>
-                <div class="col">
-                    <p class="fs-4">Incorrect: <span id="incorrect"></span></p> <!--Antal felaktiga svar visas här-->
+                <div class="col" id="incorrectAnswers">
+                    <p>Incorrect: <span id="incorrect"></span></p> <!--Antal felaktiga svar visas här-->
                 </div>
-                <div class="col">
-                    <p class="fs-4">Answered: <span id="answered"></span></p> <!--Totalt antal  svar visas här-->
+                <div class="col" id="allAnswers">
+                    <p>Answered: <span id="answered"></span></p> <!--Totalt antal  svar visas här-->
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row border">
+        <div class="row-border">
             <h1 class="text-center"> Questions</h1>
             <div class="quiz-container">
                 <!--Här hamnar frågorna-->
@@ -46,7 +45,7 @@
         </div>
     </div>
 
-    <div class="messageContainer text-center">
+    <div class="messageContainer">
         <div class="row">
             <div class="col">
                 <!--Här hamnar meddelandet med om användaren svarade rätt eller fel-->

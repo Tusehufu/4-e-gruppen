@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+.header {
+    background-color: #afc8c9;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Bungee Spice", sans-serif;
+}
+
+/* Frågor DIV */
+.row-border {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #afc8c9;
+    position: relative;
+}
+
+/* Korrekta, inkorrekta och totalt svarade frågor DIV */
+.row-answers {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #afc9b5;
+    position: relative;
+}
+
+/* Statistik för tidigare rundor DIV */
+.roundStatisticsContainer {
+    text-align: center;
+    margin-top: 100px;
+    font-family: "EB Garamond", serif;
+    background-color: #afc9b5;
+    position: relative
+}
+
+/* Svars Meddelande */
+.messageContainer {
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    z-index: 1; 
+}
+
+
+.col
+{
+    font-size: 20px;
+
+}
+
+#correct
+{
+    font-family: "EB Garamond", serif;
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect
+{
+    font-family: "EB Garamond", serif;
+    color: red;
+    font-weight: bold;
+}
+
+#answered
+{
+    font-family: "EB Garamond", serif;
+    color:blue;
+    font-weight: bold;
+}
+
+#correctAnswers
+{
+    font-family: "EB Garamond", serif;
+    margin-left: 18%;
+    color: green;
+    font-weight: bold;
+   
+}
+
+#incorrectAnswers
+{
+    font-family: "EB Garamond", serif;
+    color: red;
+    font-weight: bold;
+    
+}
+
+#allAnswers
+{
+    font-family: "EB Garamond", serif;
+    color: blue;
+    font-weight: bold;
+}
+
+
+
+.list-group-item {
+    border: none; 
+    border-radius:8px;
+    margin-bottom: 10px;
+}
+
+.list-group-item label {
+    cursor: pointer;
+}
+
+h1, h3 {
+  font-family: "EB Garamond", serif;
+  
+}
+
+#roundtxt{
+    font-size: 30px;
+    font-weight: bold;
+}
+

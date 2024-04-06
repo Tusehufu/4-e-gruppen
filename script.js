@@ -31,19 +31,21 @@ function renderQuestion() {
         alert('Quiz finished! You have answered all available questions.');
         return;
     }
+    console.log('Questions left:', questions.length);
     currentQuestion = getRandomQuestion();
+    console.log('Current question:', currentQuestion);
     quizContainer.innerHTML = `
         <div class="col">
             <h3 class="text-center">${currentQuestion.question}</h3>
             <ul class="list-group">
                 ${currentQuestion.possibleAnswers.map((option, index) => `
                     <li class="list-group-item">
-                        <input class="form-check-input form-check-input-lg custom-radio" type="radio" name="option" id="option${index}" value="${option}">
-                        <label for="option${index}" class="fs-4">${option}</label>
+                        <input type="radio" name="option" id="option${index}" value="${option}">
+                        <label for="option${index}">${option}</label>
                     </li>
                 `).join('')}
             </ul>
-            <button class="btn btn-primary mt-3" onclick="checkAnswer()">Submit</button>
+            <button class="btn btn-primary mt-2" onclick="checkAnswer()">Submit</button>
         </div>
     `;
 }
@@ -66,6 +68,7 @@ function checkAnswer() {
     }
 
     const selectedValue = selectedOption.value;
+    console.log('Selected value:', selectedValue);
 
     if (selectedValue === currentQuestion.correctAnswer) {
         correctAnswers++;
@@ -122,8 +125,8 @@ function displayStatistics() {
     quizContainer.innerHTML = `
         <div class="col">
             <h3 class="text-center">Quiz Statistics</h3>
-            <p class="text-center fs-5">You answered ${correctAnswers} out of ${totalQuestions} questions correctly.</p>
-            <p class="text-center fs-5">Percentage of correct answers: ${percentage.toFixed(2)}%</p>
+            <p class="text-center">You answered ${correctAnswers} out of ${totalQuestions} questions correctly.</p>
+            <p class="text-center">Percentage of correct answers: ${percentage.toFixed(2)}%</p>
             <button class="btn btn-primary mt-3" onclick="restartQuiz()">Try Again</button>
         </div>
     `;
@@ -165,10 +168,11 @@ function displayRoundStatistics() {
             newDiv.classList.add('row', 'border');
             newDiv.innerHTML = `
                 <div class="col">
-                    <p class="fs-4">Round ${i}:</p>
-                    <p class="fs-4">Correct: ${roundStatistics.correct}</p>
-                    <p class="fs-4">Incorrect: ${roundStatistics.incorrect}</p>
-                    <p class="fs-4">Answered: ${roundStatistics.answered}</p>
+                    <p id="roundtxt">Round ${i}:</p>
+                    <p>Correct: ${roundStatistics.correct}</p>
+                    <p>Incorrect: ${roundStatistics.incorrect}</p>
+                    <p>Answered: ${roundStatistics.answered}</p>
+                    <br>
                 </div>
             `;
             roundStatisticsContainer.appendChild(newDiv);
